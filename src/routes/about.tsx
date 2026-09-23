@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { GlowBackground, Reveal, WHATSAPP_URL } from "@/components/site";
+import secondaryPortrait from "@/assets/chinenye-portrait-secondary.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -68,8 +69,13 @@ function AboutPage() {
         </div>
 
         <Reveal className="mt-16">
-          <div className="holo-card flex flex-col items-start justify-between gap-6 rounded-2xl p-8 sm:flex-row sm:items-center">
-            <div>
+          <div className="holo-card grid overflow-hidden rounded-2xl sm:grid-cols-[220px_1fr]">
+            <img
+              src={secondaryPortrait.url}
+              alt="Chinenye G. Anaele at Will-Driven Digital Computer Services"
+              className="h-72 w-full object-cover object-top sm:h-full"
+            />
+            <div className="flex flex-col items-start justify-center p-8">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
                 Leadership
               </p>
@@ -77,15 +83,15 @@ function AboutPage() {
               <p className="mt-1 text-sm text-muted-foreground">
                 C.E.O / Contact Person — Will-Driven Digital Computer Services
               </p>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground ring-1 ring-primary/40 transition-transform hover:scale-[1.04]"
+              >
+                Chat with us
+              </a>
             </div>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground ring-1 ring-primary/40 transition-transform hover:scale-[1.04]"
-            >
-              Chat with us
-            </a>
           </div>
         </Reveal>
 
