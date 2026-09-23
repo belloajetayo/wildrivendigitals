@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import primaryPortrait from "@/assets/chinenye-portrait-primary.jpg.asset.json";
 
 export const WHATSAPP_URL =
   "https://wa.me/2348149917222?text=Hello%20Will-Driven%20Digital%2C%20I%27d%20like%20to%20make%20an%20enquiry.";
@@ -175,35 +176,25 @@ export function HeroScene() {
         className="preserve-3d absolute inset-0 transition-transform duration-300 ease-out"
         style={{ transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)` }}
       >
-        <div className="preserve-3d animate-orbit absolute inset-0">
-          {/* Driver's license card */}
-          <div className="animate-floaty absolute left-1/2 top-1/2 w-64 -translate-x-1/2 -translate-y-1/2">
-            <div className="holo-card rounded-xl p-5">
-              <div className="mb-4 flex items-center justify-between">
-                <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-primary">
-                  Driver's License
-                </span>
-                <span className="size-2 animate-glow-pulse rounded-full bg-primary" />
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="size-12 rounded-md bg-primary/20 ring-1 ring-primary/30" />
-                <div className="flex-1 space-y-1.5">
-                  <div className="h-1.5 w-3/4 rounded-full bg-foreground/30" />
-                  <div className="h-1.5 w-1/2 rounded-full bg-foreground/15" />
-                  <div className="h-1.5 w-2/3 rounded-full bg-foreground/15" />
-                </div>
-              </div>
-              <div className="mt-4 grid grid-cols-3 gap-2 text-[9px] uppercase tracking-widest text-muted-foreground">
-                <span>Class B</span>
-                <span className="text-primary">Valid ✓</span>
-                <span>FRSC</span>
-              </div>
-            </div>
+        <div className="absolute left-1/2 top-1/2 h-[88%] w-[72%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-2xl border border-primary/40 bg-card shadow-2xl shadow-primary/20">
+          <img
+            src={primaryPortrait.url}
+            alt="Chinenye G. Anaele, CEO of Will-Driven Digital Computer Services"
+            className="h-full w-full object-cover object-top"
+          />
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/75 to-transparent px-5 pt-20 pb-5">
+            <p className="font-display text-xl font-semibold">Chinenye G. Anaele</p>
+            <p className="mt-1 text-xs uppercase tracking-[0.18em] text-primary">
+              C.E.O · Will-Driven Digital
+            </p>
           </div>
+        </div>
+
+        <div className="preserve-3d absolute inset-0">
 
           {/* Plate number card */}
           <div
-            className="animate-floaty absolute right-0 top-6 w-52"
+            className="animate-floaty absolute right-0 top-6 w-44 sm:w-52"
             style={{ animationDelay: "-3s", transform: "translateZ(90px)" }}
           >
             <div className="holo-card rounded-lg p-4">
@@ -218,7 +209,7 @@ export function HeroScene() {
 
           {/* Vehicle particulars card */}
           <div
-            className="animate-floaty absolute bottom-4 left-0 w-48"
+            className="animate-floaty absolute bottom-4 left-0 w-40 sm:w-48"
             style={{ animationDelay: "-5s", transform: "translateZ(-60px)" }}
           >
             <div className="holo-card rounded-lg p-4">
