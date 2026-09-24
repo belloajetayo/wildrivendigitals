@@ -92,8 +92,8 @@ export function Reveal({
 
 export function SiteNav() {
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/70 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <nav className="fixed inset-x-0 top-4 z-50 px-4">
+      <div className="surface-shadow mx-auto flex max-w-6xl items-center justify-between rounded-2xl border border-border bg-card/80 px-4 py-3 backdrop-blur-xl sm:px-6">
         <Link to="/" className="flex items-center gap-3">
           <span className="grid size-9 place-items-center rounded-lg bg-primary/15 ring-1 ring-primary/30">
             <span className="size-3 animate-glow-pulse rounded-full bg-primary" />
@@ -131,7 +131,7 @@ export function SiteNav() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noreferrer"
-          className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground ring-1 ring-primary/40 transition-transform hover:scale-[1.04]"
+          className="button-lift rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground ring-1 ring-primary/30"
         >
           WhatsApp
         </a>
@@ -176,14 +176,14 @@ export function HeroScene() {
         className="preserve-3d absolute inset-0 transition-transform duration-300 ease-out"
         style={{ transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)` }}
       >
-        <div className="absolute left-1/2 top-1/2 h-[88%] w-[72%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-2xl border border-primary/40 bg-card shadow-2xl shadow-primary/20">
+        <div className="surface-shadow absolute left-1/2 top-1/2 h-[88%] w-[72%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-2xl border border-primary/30 bg-card ring-8 ring-card/65">
           <img
             src={primaryPortrait.url}
             alt="Chinenye G. Anaele, CEO of Will-Driven Digital Computer Services"
             className="h-full w-full object-cover object-top"
           />
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/75 to-transparent px-5 pt-20 pb-5">
-            <p className="font-display text-xl font-semibold">Chinenye G. Anaele</p>
+           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground via-foreground/70 to-transparent px-5 pt-20 pb-5 text-primary-foreground">
+             <p className="font-display text-xl font-semibold">Chinenye G. Anaele</p>
             <p className="mt-1 text-xs uppercase tracking-[0.18em] text-primary">
               C.E.O · Will-Driven Digital
             </p>
@@ -247,8 +247,8 @@ export function HeroScene() {
 export function GlowBackground() {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
-      <div className="animate-glow-pulse absolute left-1/2 top-1/3 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-primary/15 blur-[130px]" />
-      <div className="absolute right-0 top-20 h-72 w-72 rounded-full bg-amber/10 blur-[120px]" />
+      <div className="animate-glow-pulse absolute inset-x-[12%] top-[18%] h-64 bg-primary/10 blur-[110px]" />
+      <div className="absolute right-0 top-0 h-56 w-1/3 bg-amber/10 blur-[110px]" />
       <div className="grid-bg absolute inset-0" />
     </div>
   );

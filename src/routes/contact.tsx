@@ -70,13 +70,13 @@ function ContactPage() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground ring-1 ring-primary/40 transition-transform hover:scale-[1.04]"
+                className="button-lift rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground ring-1 ring-primary/30"
               >
                 Contact Us on WhatsApp
               </a>
               <a
                 href="mailto:anaeleimma77@gmail.com"
-                className="rounded-lg border border-border bg-card/60 px-6 py-3 text-sm font-medium backdrop-blur transition-colors hover:bg-card"
+                className="button-lift rounded-lg border border-border bg-card/80 px-6 py-3 text-sm font-medium backdrop-blur"
               >
                 Email Us
               </a>
@@ -86,7 +86,7 @@ function ContactPage() {
           <div className="space-y-4">
             {CHANNELS.map((c, i) => (
               <Reveal key={c.label} delay={i * 90}>
-                <div className="card-3d flex items-center gap-4 rounded-xl border border-border bg-card/60 p-5 backdrop-blur">
+                <div className="card-3d surface-shadow flex items-center gap-4 rounded-xl border border-border bg-card/80 p-5 backdrop-blur">
                   <span
                     className={`size-2.5 animate-glow-pulse rounded-full ${
                       c.accent ? "bg-amber" : "bg-primary"

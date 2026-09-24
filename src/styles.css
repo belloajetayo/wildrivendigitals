@@ -37,28 +37,28 @@
 }
 
 :root {
-  --radius: 0.75rem;
-  --background: oklch(0.11 0.02 240);
-  --foreground: oklch(0.95 0.01 220);
-  --card: oklch(0.15 0.025 240);
-  --card-foreground: oklch(0.95 0.01 220);
-  --popover: oklch(0.15 0.025 240);
-  --popover-foreground: oklch(0.95 0.01 220);
-  --primary: oklch(0.82 0.14 185);
-  --primary-foreground: oklch(0.13 0.03 240);
-  --secondary: oklch(0.2 0.03 240);
-  --secondary-foreground: oklch(0.95 0.01 220);
-  --muted: oklch(0.2 0.03 240);
-  --muted-foreground: oklch(0.66 0.03 230);
-  --accent: oklch(0.2 0.03 240);
-  --accent-foreground: oklch(0.95 0.01 220);
+  --radius: 0.625rem;
+  --background: oklch(0.985 0.008 195);
+  --foreground: oklch(0.22 0.035 215);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.035 215);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.035 215);
+  --primary: oklch(0.58 0.14 178);
+  --primary-foreground: oklch(0.99 0.005 180);
+  --secondary: oklch(0.94 0.025 190);
+  --secondary-foreground: oklch(0.28 0.04 205);
+  --muted: oklch(0.95 0.015 205);
+  --muted-foreground: oklch(0.5 0.035 220);
+  --accent: oklch(0.93 0.035 85);
+  --accent-foreground: oklch(0.3 0.06 70);
   --destructive: oklch(0.65 0.2 25);
   --destructive-foreground: oklch(0.97 0.01 220);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 14%);
-  --ring: oklch(0.82 0.14 185);
-  --glow: oklch(0.82 0.14 185);
-  --amber: oklch(0.78 0.15 80);
+  --border: oklch(0.82 0.025 205 / 62%);
+  --input: oklch(0.84 0.025 205);
+  --ring: oklch(0.58 0.14 178);
+  --glow: oklch(0.66 0.13 178);
+  --amber: oklch(0.72 0.16 75);
 }
 
 @layer base {
@@ -74,6 +74,7 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-body);
+    background-image: linear-gradient(180deg, color-mix(in oklab, var(--primary) 4%, transparent), transparent 32rem);
   }
 }
 
@@ -156,13 +157,13 @@
   background: linear-gradient(
     135deg,
     color-mix(in oklab, var(--glow) 16%, transparent),
-    oklch(1 0 0 / 4%)
+    oklch(1 0 0 / 82%)
   );
   backdrop-filter: blur(18px);
-  border: 1px solid oklch(1 0 0 / 16%);
+  border: 1px solid color-mix(in oklab, var(--primary) 24%, white);
   box-shadow:
-    0 24px 60px -20px color-mix(in oklab, var(--glow) 35%, transparent),
-    inset 0 1px 0 oklch(1 0 0 / 12%);
+    0 24px 60px -24px color-mix(in oklab, var(--glow) 38%, transparent),
+    inset 0 1px 0 oklch(1 0 0 / 90%);
 }
 
 @utility card-3d {
@@ -173,7 +174,7 @@
     box-shadow 0.4s;
 
   &:hover {
-    transform: rotateX(6deg) rotateY(-8deg) translateY(-8px);
+    transform: rotateX(3deg) rotateY(-4deg) translateY(-10px);
     border-color: color-mix(in oklab, var(--glow) 45%, transparent);
     box-shadow: 0 30px 70px -24px color-mix(in oklab, var(--glow) 40%, transparent);
   }
@@ -181,8 +182,8 @@
 
 @utility grid-bg {
   background-image:
-    linear-gradient(oklch(1 0 0 / 5%) 1px, transparent 1px),
-    linear-gradient(90deg, oklch(1 0 0 / 5%) 1px, transparent 1px);
+    linear-gradient(color-mix(in oklab, var(--primary) 10%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in oklab, var(--primary) 10%, transparent) 1px, transparent 1px);
   background-size: 44px 44px;
   mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
 }
@@ -205,4 +206,32 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+@utility surface-shadow {
+  box-shadow: 0 18px 55px -28px color-mix(in oklab, var(--foreground) 24%, transparent);
+}
+
+@utility button-lift {
+  transition: transform 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px -14px color-mix(in oklab, var(--primary) 55%, transparent);
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.98);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
