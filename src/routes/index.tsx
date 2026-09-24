@@ -36,8 +36,11 @@ function HomePage() {
       {/* HERO */}
       <header className="relative flex min-h-[92svh] items-center overflow-hidden pt-28 pb-16">
         <GlowBackground />
-        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
+        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="order-2 lg:order-1">
+            <HeroScene />
+          </div>
+          <div className="order-1 lg:order-2">
             <p className="animate-rise mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur">
               <span className="size-1.5 animate-glow-pulse rounded-full bg-primary" />
               Reg No. 3708848 · Suleja, Niger State
@@ -75,7 +78,6 @@ function HomePage() {
               </Link>
             </div>
           </div>
-          <HeroScene />
         </div>
       </header>
 
