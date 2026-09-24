@@ -34,7 +34,7 @@ function HomePage() {
   return (
     <div>
       {/* HERO */}
-      <header className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-16">
+      <header className="relative flex min-h-[92svh] items-center overflow-hidden pt-28 pb-16">
         <GlowBackground />
         <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
@@ -63,13 +63,13 @@ function HomePage() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground ring-1 ring-primary/40 transition-transform hover:scale-[1.04]"
+                className="button-lift rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground ring-1 ring-primary/30"
               >
                 Contact Us on WhatsApp
               </a>
               <Link
                 to="/services"
-                className="rounded-lg border border-border bg-card/60 px-6 py-3 text-sm font-medium text-foreground backdrop-blur transition-colors hover:bg-card"
+                className="button-lift rounded-lg border border-border bg-card/80 px-6 py-3 text-sm font-medium text-foreground backdrop-blur"
               >
                 Explore Our Services
               </Link>
@@ -115,7 +115,7 @@ function HomePage() {
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.slice(0, 6).map((s, i) => (
               <Reveal key={s.num} delay={i * 80}>
-                <Link to="/services" className="card-3d block h-full rounded-2xl border border-border bg-card/60 p-6 backdrop-blur">
+                <Link to="/services" className="card-3d surface-shadow block h-full rounded-2xl border border-border bg-card/80 p-6 backdrop-blur">
                   <div className="mb-5 flex items-center justify-between">
                     <span className="grid size-11 place-items-center rounded-lg bg-primary/15 text-lg text-primary ring-1 ring-primary/25">
                       {s.glyph}
@@ -131,7 +131,7 @@ function HomePage() {
           <Reveal className="mt-10 text-center">
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 rounded-lg border border-border bg-card/60 px-6 py-3 text-sm font-medium backdrop-blur transition-colors hover:bg-card"
+              className="button-lift inline-flex items-center gap-2 rounded-lg border border-border bg-card/80 px-6 py-3 text-sm font-medium backdrop-blur"
             >
               View all 7 services →
             </Link>
@@ -155,13 +155,13 @@ function HomePage() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              className="rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground ring-1 ring-primary/40 transition-transform hover:scale-[1.04]"
+              className="button-lift rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground ring-1 ring-primary/30"
             >
               Chat on WhatsApp
             </a>
             <Link
               to="/contact"
-              className="rounded-lg border border-border bg-card/60 px-6 py-3 text-sm font-medium backdrop-blur transition-colors hover:bg-card"
+              className="button-lift rounded-lg border border-border bg-card/80 px-6 py-3 text-sm font-medium backdrop-blur"
             >
               Contact & Location
             </Link>

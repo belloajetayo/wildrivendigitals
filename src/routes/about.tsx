@@ -60,7 +60,7 @@ function AboutPage() {
         <div className="mt-16 grid gap-5 sm:grid-cols-3">
           {VALUES.map((v, i) => (
             <Reveal key={v.title} delay={i * 100}>
-              <div className="card-3d h-full rounded-2xl border border-border bg-card/60 p-6 backdrop-blur">
+              <div className="card-3d surface-shadow h-full rounded-2xl border border-border bg-card/80 p-6 backdrop-blur">
                 <h3 className="font-display text-lg font-semibold text-primary">{v.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{v.desc}</p>
               </div>
@@ -87,7 +87,7 @@ function AboutPage() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-6 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground ring-1 ring-primary/40 transition-transform hover:scale-[1.04]"
+                className="button-lift mt-6 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground ring-1 ring-primary/30"
               >
                 Chat with us
               </a>

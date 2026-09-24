@@ -44,7 +44,7 @@ function ServicesPage() {
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s, i) => (
             <Reveal key={s.num} delay={(i % 3) * 90}>
-              <div className="card-3d h-full rounded-2xl border border-border bg-card/60 p-6 backdrop-blur">
+              <div className="card-3d surface-shadow h-full rounded-2xl border border-border bg-card/80 p-6 backdrop-blur">
                 <div className="mb-5 flex items-center justify-between">
                   <span className="grid size-11 place-items-center rounded-lg bg-primary/15 text-lg text-primary ring-1 ring-primary/25">
                     {s.glyph}
@@ -62,7 +62,7 @@ function ServicesPage() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              className="card-3d flex h-full flex-col justify-between rounded-2xl border border-primary/40 bg-primary/10 p-6 backdrop-blur"
+              className="card-3d surface-shadow flex h-full flex-col justify-between rounded-2xl border border-primary/40 bg-primary/10 p-6 backdrop-blur"
             >
               <h3 className="font-display text-lg font-semibold">
                 Not sure what you need?
