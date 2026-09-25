@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import primaryPortrait from "@/assets/chinenye-portrait-primary.jpg.asset.json";
 
 export const WHATSAPP_URL =
   "https://wa.me/2348149917222?text=Hello%20Will-Driven%20Digital%2C%20I%27d%20like%20to%20make%20an%20enquiry.";
@@ -178,8 +177,9 @@ export function HeroScene() {
       >
         <div className="surface-shadow absolute left-1/2 top-1/2 h-[88%] w-[72%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-2xl border border-primary/30 bg-card ring-8 ring-card/65">
           <img
-            src={primaryPortrait.url}
+            src="/chinenye-g-anaele.jpg"
             alt="Chinenye G. Anaele, CEO of Will-Driven Digital Computer Services"
+            fetchPriority="high"
             className="h-full w-full object-cover object-top"
           />
            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground via-foreground/70 to-transparent px-5 pt-20 pb-5 text-primary-foreground">

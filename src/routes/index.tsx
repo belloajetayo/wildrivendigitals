@@ -24,7 +24,15 @@ export const Route = createFileRoute("/")({
           "Integrated digital and vehicle services, all at your fingertips — Suleja, Niger State. We are here to serve you better.",
       },
       { property: "og:type", content: "website" },
+      {
+        property: "og:image",
+        content: "https://wildrivendigitals.lovable.app/chinenye-g-anaele.jpg",
+      },
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:image",
+        content: "https://wildrivendigitals.lovable.app/chinenye-g-anaele.jpg",
+      },
     ],
   }),
   component: HomePage,
