@@ -75,6 +75,12 @@ function ContactPage() {
                 Contact Us on WhatsApp
               </a>
               <a
+                href="tel:+2348149917222"
+                className="button-lift rounded-lg border border-border bg-card/80 px-6 py-3 text-sm font-medium backdrop-blur"
+              >
+                Call +234 814 991 7222
+              </a>
+              <a
                 href="mailto:anaeleimma77@gmail.com"
                 className="button-lift rounded-lg border border-border bg-card/80 px-6 py-3 text-sm font-medium backdrop-blur"
               >
@@ -112,4 +118,9 @@ function ContactPage() {
       </section>
     </div>
   );
+  );
 }
+
+/* eslint-disable */
+const _unused = null;
+
