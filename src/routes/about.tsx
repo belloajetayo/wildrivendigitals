@@ -9,7 +9,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Nocyangel Digital Global presents Will-Driven Digital Computer Services — your comprehensive hub for modern internet solutions, official documentation, and vehicle registration services in Suleja, Niger State.",
+          "Will-Driven Digital Computer Services — your comprehensive hub for modern internet solutions, official documentation, and vehicle registration services in Suleja, Niger State.",
       },
       { property: "og:title", content: "About Us — Will-Driven Digital Computer Services" },
       {
@@ -50,7 +50,7 @@ function AboutPage() {
             Digital convenience meets <span className="text-gradient">essential services</span>
           </h1>
           <p className="mt-6 max-w-[62ch] text-lg leading-relaxed text-pretty text-muted-foreground">
-            Nocyangel Digital Global presents Will-Driven Digital Computer Services, your
+            Will-Driven Digital Computer Services, your
             comprehensive hub for modern internet solutions, official documentation, and vehicle
             registration services. We bridge the gap between digital convenience and essential
             administrative services, ensuring you get things done quickly and accurately.

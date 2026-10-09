@@ -97,7 +97,7 @@ function HomePage() {
           </h2>
           <div>
             <p className="max-w-[56ch] text-lg leading-relaxed text-pretty text-muted-foreground">
-              Nocyangel Digital Global presents Will-Driven Digital Computer Services — bridging the
+              Will-Driven Digital Computer Services — bridging the
               gap between digital convenience and essential administrative services, so you get
               things done quickly and accurately.
             </p>
