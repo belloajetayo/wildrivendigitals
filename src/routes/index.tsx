@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { createFileRoute } from "@tanstack/react-router";
+import { ServiceGallery } from "@/components/service-gallery";
 import {
   GlowBackground,
   HeroScene,
@@ -97,7 +98,7 @@ function HomePage() {
           </h2>
           <div>
             <p className="max-w-[56ch] text-lg leading-relaxed text-pretty text-muted-foreground">
-              Nocyangel Digital Global presents Will-Driven Digital Computer Services — bridging the
+              Will-Driven Digital Computer Services — bridging the
               gap between digital convenience and essential administrative services, so you get
               things done quickly and accurately.
             </p>
@@ -148,6 +149,8 @@ function HomePage() {
           </Reveal>
         </div>
       </section>
+
+      <ServiceGallery />
 
       {/* CTA BAND */}
       <section className="relative overflow-hidden border-t border-border px-6 py-24">
