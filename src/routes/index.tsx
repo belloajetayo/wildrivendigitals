@@ -25,15 +25,7 @@ export const Route = createFileRoute("/")({
           "Integrated digital and vehicle services, all at your fingertips — Suleja, Niger State. We are here to serve you better.",
       },
       { property: "og:type", content: "website" },
-      {
-        property: "og:image",
-        content: "https://wildrivendigitals.lovable.app/chinenye-g-anaele.jpg",
-      },
       { name: "twitter:card", content: "summary_large_image" },
-      {
-        name: "twitter:image",
-        content: "https://wildrivendigitals.lovable.app/chinenye-g-anaele.jpg",
-      },
     ],
   }),
   component: HomePage,
@@ -43,7 +35,7 @@ function HomePage() {
   return (
     <div>
       {/* HERO */}
-      <header className="relative flex min-h-[92svh] items-center overflow-hidden pt-28 pb-16">
+      <header className="relative flex items-center overflow-hidden pt-28 pb-12 lg:pt-36 lg:pb-16">
         <GlowBackground />
         <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-6 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="order-2 lg:order-1">
