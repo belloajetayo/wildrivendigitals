@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { GlowBackground, Reveal, WHATSAPP_URL } from "@/components/site";
-import secondaryPortrait from "@/assets/chinenye-portrait-secondary.jpg.asset.json";
+import ceoPortrait from "@/assets/computer-services.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -69,13 +69,15 @@ function AboutPage() {
         </div>
 
         <Reveal className="mt-16">
-          <div className="holo-card grid overflow-hidden rounded-2xl sm:grid-cols-[220px_1fr]">
+          <div className="grid items-center gap-8 border-t border-border pt-10 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
             <img
-              src={secondaryPortrait.url}
-              alt="Chinenye G. Anaele at Will-Driven Digital Computer Services"
-              className="h-72 w-full object-cover object-top sm:h-full"
+              src={ceoPortrait.url}
+              alt="Chinenye G. Anaele, CEO, wearing red at her computer"
+              width={768}
+              height={768}
+              className="aspect-square w-full rounded-lg object-cover"
             />
-            <div className="flex flex-col items-start justify-center p-8">
+            <div className="flex min-w-0 flex-col items-start justify-center py-4">
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
                 Leadership
               </p>
