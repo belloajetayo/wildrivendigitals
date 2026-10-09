@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { createFileRoute } from "@tanstack/react-router";
+import { ServiceGallery } from "@/components/service-gallery";
 import {
   GlowBackground,
   HeroScene,
@@ -148,6 +149,8 @@ function HomePage() {
           </Reveal>
         </div>
       </section>
+
+      <ServiceGallery />
 
       {/* CTA BAND */}
       <section className="relative overflow-hidden border-t border-border px-6 py-24">
