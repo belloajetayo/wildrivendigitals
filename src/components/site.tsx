@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import ceoPortrait from "@/assets/computer-services.jpg.asset.json";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
 export const WHATSAPP_URL =
@@ -152,95 +153,25 @@ export function SiteFooter() {
   );
 }
 
-/* Mouse-tilting 3D scene with orbiting holographic documents */
+/* CEO portrait */
 export function HeroScene() {
-  const ref = useRef<HTMLDivElement>(null);
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
-
   return (
-    <div
-      ref={ref}
-      className="scene-3d relative mx-auto h-[420px] w-full max-w-md lg:h-[540px]"
-      onMouseMove={(e) => {
-        const r = ref.current?.getBoundingClientRect();
-        if (!r) return;
-        setTilt({
-          x: ((e.clientY - r.top) / r.height - 0.5) * -10,
-          y: ((e.clientX - r.left) / r.width - 0.5) * 14,
-        });
-      }}
-      onMouseLeave={() => setTilt({ x: 0, y: 0 })}
-    >
-      <div
-        className="preserve-3d absolute inset-0 transition-transform duration-300 ease-out"
-        style={{ transform: `rotateX(${tilt.x}deg) rotateY(${tilt.y}deg)` }}
-      >
-        <div className="surface-shadow absolute left-1/2 top-1/2 h-[88%] w-[72%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-2xl border border-primary/30 bg-card ring-8 ring-card/65">
-          <img
-            src="/chinenye-g-anaele.jpg"
-            alt="Chinenye G. Anaele, CEO of Will-Driven Digital Computer Services"
-            fetchPriority="high"
-            className="h-full w-full object-cover object-top"
-          />
-           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground via-foreground/70 to-transparent px-5 pt-20 pb-5 text-primary-foreground">
-             <p className="font-display text-xl font-semibold">Chinenye G. Anaele</p>
-            <p className="mt-1 text-xs uppercase tracking-[0.18em] text-primary">
-              C.E.O · Will-Driven Digital
-            </p>
-          </div>
-        </div>
-
-        <div className="preserve-3d absolute inset-0">
-
-          {/* Plate number card */}
-          <div
-            className="animate-floaty absolute right-0 top-6 w-44 sm:w-52"
-            style={{ animationDelay: "-3s", transform: "translateZ(90px)" }}
-          >
-            <div className="holo-card rounded-lg p-4">
-              <div className="mb-2 text-[9px] font-semibold uppercase tracking-[0.22em] text-amber">
-                Plate Registration
-              </div>
-              <div className="rounded-md bg-background/80 px-3 py-2 text-center font-display text-xl font-semibold tracking-[0.28em] text-foreground ring-1 ring-amber/50">
-                KUJ·204·XY
-              </div>
-            </div>
-          </div>
-
-          {/* Vehicle particulars card */}
-          <div
-            className="animate-floaty absolute bottom-4 left-0 w-40 sm:w-48"
-            style={{ animationDelay: "-5s", transform: "translateZ(-60px)" }}
-          >
-            <div className="holo-card rounded-lg p-4">
-              <div className="mb-3 flex items-center justify-between text-[9px] font-semibold uppercase tracking-[0.22em] text-muted-foreground">
-                <span>Vehicle Particulars</span>
-                <span className="text-primary">✓</span>
-              </div>
-              <div className="space-y-2">
-                <div className="h-1.5 w-full rounded-full bg-foreground/20" />
-                <div className="h-1.5 w-4/5 rounded-full bg-foreground/10" />
-                <div className="h-1.5 w-3/5 rounded-full bg-foreground/10" />
-                <div className="h-1.5 w-2/3 rounded-full bg-primary/30" />
-              </div>
-            </div>
-          </div>
-
-          {/* Insurance seal */}
-          <div
-            className="animate-floaty absolute bottom-16 right-4"
-            style={{ animationDelay: "-1.5s", transform: "translateZ(50px)" }}
-          >
-            <div className="holo-card grid size-24 place-items-center rounded-full">
-              <span className="text-center text-[9px] font-semibold uppercase tracking-[0.25em] text-primary">
-                Insured
-                <br />✓
-              </span>
-            </div>
-          </div>
-        </div>
+    <figure className="mx-auto w-full max-w-lg">
+      <div className="overflow-hidden rounded-lg">
+        <img
+          src={ceoPortrait.url}
+          alt="Chinenye G. Anaele, CEO of Will-Driven Digital Computer Services, wearing red"
+          width={768}
+          height={768}
+          fetchPriority="high"
+          className="aspect-square w-full object-cover transition-transform duration-700 hover:scale-[1.025] motion-reduce:transform-none"
+        />
       </div>
-    </div>
+      <figcaption className="mt-5 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 border-b border-border pb-4">
+        <p className="font-display text-xl font-semibold text-foreground">Chinenye G. Anaele</p>
+        <p className="text-xs font-semibold uppercase text-primary">C.E.O · Will-Driven Digital</p>
+      </figcaption>
+    </figure>
   );
 }
 
